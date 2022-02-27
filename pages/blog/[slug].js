@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { PostBanner, SponsoredCard, PostContent, PostLikes } from '../Componentes';
 import { getPost, getPostDetails } from '../services/index'
 
