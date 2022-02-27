@@ -22,7 +22,7 @@ const PostBanner = ({ post }) => {
                 <Image className='img-postbanner' width={600} height={400} alt={`img-${title}`} src={featureImage.url}/>
             </div>
         </div>
-    )
+    );
 }
 
-export default PostBanner
+export default PostBanner;

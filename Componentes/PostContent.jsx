@@ -74,4 +74,4 @@ const PostContent = ({content, language}) => {
     )
 }
 
-export default PostContent
+export default PostContent;

@@ -2,7 +2,6 @@ import React from 'react'
 import Link from 'next/link'
 
 const Navbar = () => {
-    const routes = [{name:"Programación", slug:"programación",content : []}]
     return (
         <nav className='ctn-header'>
             <div className='ctn-logo'>
@@ -10,7 +9,6 @@ const Navbar = () => {
                     <span className='ctn-logo-text'>Computer Society</span>
                 </Link>
             </div>
-            
         </nav>
     )
 }
