@@ -1,6 +1,7 @@
 import React from 'react';
 import { CopyBlock, dracula, a11yLight, solarizedLight, atomOneLight } from 'react-code-blocks';
 import Link from 'next/link';
+import Image from 'next/image';
 const PostContent = ({content, language}) => {
     const getContentFragment = (index, text, obj, type) => {
         let modifiedText = text;
@@ -19,7 +20,7 @@ const PostContent = ({content, language}) => {
           }
           if (obj.href!=undefined) {
               modifiedText = (<div className='cta'>
-                  <Link key={index} href={obj.href} target="_blank" >
+                  <Link key={index} href={obj.href} passHref >
                   <span className='span-btn'>{obj.title}</span></Link>
                     <svg className='svg-btn' width="15px" height="10px" viewBox="0 0 13 10">
                         <path d="M1,5 L11,5"></path>
@@ -47,7 +48,7 @@ const PostContent = ({content, language}) => {
                 return <p key={index} className="block-quote">{modifiedText.map((item,i)=><React.Fragment key={i}>{item}</React.Fragment>)}</p>
             case 'image':
                 return (
-                    <img
+                    <Image
                         key={index}
                         alt={obj.title}
                         height={obj.height/2}

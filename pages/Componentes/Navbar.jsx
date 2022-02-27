@@ -6,7 +6,7 @@ const Navbar = () => {
     return (
         <nav className='ctn-header'>
             <div className='ctn-logo'>
-                <Link href='/'>
+                <Link href='/' passHref>
                     <span className='ctn-logo-text'>Computer Society</span>
                 </Link>
             </div>

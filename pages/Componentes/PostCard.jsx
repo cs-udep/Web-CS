@@ -1,15 +1,15 @@
 import React from 'react';
 import moment from 'moment';
 import Link from 'next/link';
-
+import Image from 'next/image';
 const PostCard = ({post}) => {
     return (
         <div className='postcard'>
             <div className='postcard-img'>
-                <img className='img-postcard' src={post.featureImage.url} alt={`img-${post.title}`}/>
+                <Image className='img-postcard' width={500} height={350} src={post.featureImage.url} alt={`img-${post.title}`}/>
             </div>
             <div className='postcard-content'>               
-                <Link href={`/blog/${post.slug}`}><h1 className='title-postcard'>{post.title}</h1></Link>
+                <Link href={`/blog/${post.slug}`} passHref><h1 className='title-postcard'>{post.title}</h1></Link>
                 
                 <div className='postcard-description'>
                     <p>{post.description}</p>
@@ -18,7 +18,7 @@ const PostCard = ({post}) => {
                     {
                         post.author.map((item)=>{
                             return <div className='author'>
-                                <img className='author-photo' src={item.profilePhoto.url} alt={item.name}>
+                                <img className='author-photo' key={item.name} src={item.profilePhoto.url} alt={item.name}>
                                 </img>
                                 <span className='author-name'>By {item.name}</span>
                             </div>
