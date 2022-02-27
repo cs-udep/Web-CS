@@ -11,8 +11,19 @@ const PostCard = ({post}) => {
             <div className='postcard-content'>               
                 <Link href={`/blog/${post.slug}`}><h1 className='title-postcard'>{post.title}</h1></Link>
                 
-                <div className=''>
+                <div className='postcard-description'>
                     <p>{post.description}</p>
+                </div>
+                <div className='postcard-author'>
+                    {
+                        post.author.map((item)=>{
+                            return <div className='author'>
+                                <img className='author-photo' src={item.profilePhoto.url} alt={item.name}>
+                                </img>
+                                <span className='author-name'>By {item.name}</span>
+                            </div>
+                        })
+                    }
                 </div>
                 <div className='postcard-cat-time'>
                     <div className='postcard-categories'>

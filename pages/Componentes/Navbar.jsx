@@ -7,7 +7,7 @@ const Navbar = () => {
         <nav className='ctn-header'>
             <div className='ctn-logo'>
                 <Link href='/'>
-                    <span className='ctn-logo-text'>FreeBlog</span>
+                    <span className='ctn-logo-text'>Computer Society</span>
                 </Link>
             </div>
             <div className='ctn-routes'>

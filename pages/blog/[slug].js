@@ -1,5 +1,5 @@
 import React from 'react'
-import { PostBanner, SponsoredCard, PostContent } from '../Componentes';
+import { PostBanner, SponsoredCard, PostContent, PostLikes } from '../Componentes';
 import { getPost, getPostDetails } from '../services/index'
 
 const PostDetails = ({ posts }) => {
@@ -11,6 +11,9 @@ const PostDetails = ({ posts }) => {
             <div className='ctn-postcontent-sc'>
                 <PostContent content={posts.content} language={posts.languageP}/>
                 <SponsoredCard/>
+            </div>
+            <div>
+                <PostLikes post={posts}/>
             </div>
         </div>
     )

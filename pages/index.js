@@ -8,8 +8,8 @@ export default function Home({ posts }) {
   return (
     <div className='ctn'>
       <Head>
-        <title>FreeBlog</title>
-        <meta name="Blog de programacion y demas" content="Blog donde comparto lo que aprendo en programación y en mi carrera" />
+        <title>Computer Society</title>
+        <meta name="Computer Society" content="Blog de computer society Udep Piura" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
         <div className='ctn-postwidget'>
@@ -20,14 +20,17 @@ export default function Home({ posts }) {
           </div>
           <PostWidget/>
         </div>
-        <div className='ctn-postcard-sponsoredcard'>
-          <div className='ctn-postcard'>
-            {posts.map((item)=><PostCard key={item.node.title} post={item.node}/>)}
-          </div>
-          <div className='ctn-sponsoredcard'>
+
+        <div>
+          <h1>Últimos artículos</h1>
+          <div className='ctn-postcard-sponsoredcard'>
+            <div className='ctn-postcard'>
+              {posts.map((item)=><PostCard key={item.node.title} post={item.node}/>)}
+            </div>
+            <div className='ctn-sponsoredcard'>
+            </div>
           </div>
         </div>
-
     </div>
   )
 }

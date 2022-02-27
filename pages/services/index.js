@@ -134,3 +134,15 @@ export const getSimilarPosts = async () =>{
   return results.posts;
 }
 
+export const updateLike = async () =>{
+  const query = gql`
+    mutation MyMutation ($like : Int! ,$slug : String!) {
+      updatePost(
+        data: {like: }, 
+        where: {slug: $slug}
+      ) {
+        like
+      }
+    }
+  `
+}
