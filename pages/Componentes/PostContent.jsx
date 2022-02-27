@@ -1,5 +1,4 @@
 import React from 'react';
-import { CopyBlock, dracula, a11yLight, solarizedLight, atomOneLight } from 'react-code-blocks';
 import Link from 'next/link';
 import Image from 'next/image';
 const PostContent = ({content, language}) => {
@@ -43,7 +42,7 @@ const PostContent = ({content, language}) => {
             case 'paragraph':
                 return <p key={index} className="p">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
             case 'code-block':
-                return (<div key={index} className='div-code'>{modifiedText.map((item,i)=> <CopyBlock key={i} text={item} language={language} theme={atomOneLight} showLineNumbers={true} wrapLines={true}  codeBlock />)}</div>);
+                return (<div key={index} className='div-code'>{modifiedText.map((item,i)=> <code key={i} >{item}</code>)}</div>);
             case 'block-quote':
                 return <p key={index} className="block-quote">{modifiedText.map((item,i)=><React.Fragment key={i}>{item}</React.Fragment>)}</p>
             case 'image':
