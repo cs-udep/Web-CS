@@ -18,8 +18,7 @@ const PostCard = ({post}) => {
                     {
                         post.author.map((item)=>{
                             return <div className='author' key={item.name}>
-                                <img className='author-photo' key={item.name} src={item.profilePhoto.url} alt={item.name}>
-                                </img>
+                                <Image className='author-photo'  width={40} height={40} src={item.profilePhoto.url} alt={item.name}/>
                                 <span className='author-name'>By {item.name}</span>
                             </div>
                         })
