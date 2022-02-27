@@ -8,21 +8,20 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "bcrypt": "^5.0.1",
-    "graphql": "^16.2.0",
-    "graphql-request": "^3.7.0",
-    "html-react-parser": "^1.4.4",
+    "graphql": "^16.3.0",
+    "graphql-request": "^4.0.0",
+    "html-react-parser": "^1.4.8",
     "moment": "^2.29.1",
     "next": "^12.1.0",
-    "next-auth": "^4.1.0",
+    "next-auth": "^4.2.1",
     "react": "17.0.2",
     "react-code-blocks": "^0.0.9-0",
     "react-dom": "17.0.2",
-    "react-multi-carousel": "^2.6.5"
+    "react-multi-carousel": "^2.8.0"
   },
   "devDependencies": {
-    "eslint": "8.6.0",
-    "eslint-config-next": "12.0.7",
-    "tailwindcss": "^3.0.10"
+    "eslint": "8.10.0",
+    "eslint-config-next": "12.1.0",
+    "tailwindcss": "^3.0.23"
   }
 }
