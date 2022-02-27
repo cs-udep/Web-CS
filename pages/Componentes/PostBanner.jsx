@@ -1,5 +1,6 @@
 import React from 'react'
 import moment from 'moment'
+import Image from 'next/image'
 const PostBanner = ({ post }) => {
     const {title, category, featureImage, description, time } = post
     return (
@@ -18,7 +19,7 @@ const PostBanner = ({ post }) => {
                 }
             </div>
             <div className='postbanner-img'>
-                <img className='img-postbanner' alt={`img-${title}`} src={featureImage.url}></img>
+                <Image className='img-postbanner' width={600} height={400} alt={`img-${title}`} src={featureImage.url}/>
             </div>
         </div>
     )

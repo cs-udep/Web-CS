@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 const PostCard = ({post}) => {
     return (
-        <div className='postcard'>
+        <div key={post.title} className='postcard'>
             <div className='postcard-img'>
                 <Image className='img-postcard' width={500} height={350} src={post.featureImage.url} alt={`img-${post.title}`}/>
             </div>
@@ -17,7 +17,7 @@ const PostCard = ({post}) => {
                 <div className='postcard-author'>
                     {
                         post.author.map((item)=>{
-                            return <div className='author'>
+                            return <div className='author' key={item.name}>
                                 <img className='author-photo' key={item.name} src={item.profilePhoto.url} alt={item.name}>
                                 </img>
                                 <span className='author-name'>By {item.name}</span>
