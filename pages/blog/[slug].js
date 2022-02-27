@@ -1,8 +1,13 @@
 import React from 'react';
-import { PostBanner, SponsoredCard, PostContent, PostLikes } from '../Componentes';
-import { getPost, getPostDetails } from '../services/index'
+import { useRouter } from 'next/router'
+import { PostBanner, SponsoredCard, PostContent, PostLikes } from '../../Componentes';
+import { getPost, getPostDetails } from '../../services'
 
 const PostDetails = ({ posts }) => {
+    const router = useRouter();
+    if (router.isFallback) {
+        return <p>Loading</p>
+    }
     return (
         <div className='ctn-article'>
             <div className='ctn-postbanner'>
