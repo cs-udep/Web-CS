@@ -1,6 +1,6 @@
 
 import Head from 'next/head'
-import { PostCard, PostMain, PostWidget, SponsoredCard } from './Componentes'
+import { PostCard,  PostWidget } from './Componentes'
 import { getPost } from './services'
 
 
