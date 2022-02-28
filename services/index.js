@@ -38,7 +38,52 @@ export const getPost = async ()=> {
 
   return results.postsConnection.edges;
 }
-
+export const getEvent = async ()=>{
+  const query = gql`
+  query GetEvents {
+    eventsConnection(last: 3) {
+      edges {
+        cursor
+        node {
+          title
+          url
+          dateTime_event
+          description
+          featureImg {
+            width
+            url
+            height
+          }
+        }
+      }
+    }
+  }
+  `
+  const result = await request(graphqlAPI, query);
+  return result.eventsConnection.edges;
+}
+export const getEventDetails = async (url)=>{
+  const query = gql`
+    query GetEventsDetails($url : String!){
+      event(where: {url: $url}) {
+        description
+        featureImg {
+          height
+          width
+          url
+        }
+        title
+        content {
+          raw
+        }
+        url
+        dateTime_event
+      }
+    }
+  `
+  const result = await request(graphqlAPI, query, {url});
+  return result.event;
+} 
 export const getPostDetails = async (slug)=> {
   const query = gql`
   query GetPostDetails ($slug: String!){

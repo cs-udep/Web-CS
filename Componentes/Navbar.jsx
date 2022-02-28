@@ -1,13 +1,22 @@
-import React from 'react'
-import Link from 'next/link'
+import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import CSLogo  from '../Imagenes/CSLogo.png'
 
 const Navbar = () => {
+    const routes = [
+        {name : 'Blog', slug : 'blog'},
+        {name : 'Acerca de', slug : 'acerca'}
+    ]
     return (
         <nav className='ctn-header'>
             <div className='ctn-logo'>
                 <Link href='/' passHref>
-                    <span className='ctn-logo-text'>Computer Society</span>
+                    <Image src={CSLogo}  alt='Logo de Computer Society' width={110} height={38}/>
                 </Link>
+            </div>
+            <div className='ctn-routes'>
+                
             </div>
         </nav>
     )

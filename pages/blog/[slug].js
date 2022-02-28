@@ -1,15 +1,16 @@
 import React from 'react';
 import { useRouter } from 'next/router'
-import { PostBanner, SponsoredCard, PostContent, PostLikes } from '../../Componentes';
+import { PostBanner, SponsoredCard, PostContent, PostLikes, PostWidget } from '../../Componentes';
 import { getPost, getPostDetails } from '../../services'
 
 const PostDetails = ({ posts }) => {
+    console.log(posts);
     const router = useRouter();
     if (router.isFallback) {
         return <p>Loading</p>
     }
     return (
-        <div className='ctn-article'>
+        <div className='ctn-post-article'>
             <div className='ctn-postbanner'>
                 <PostBanner post={posts}/>
             </div>
@@ -20,6 +21,7 @@ const PostDetails = ({ posts }) => {
             <div>
                 <PostLikes post={posts}/>
             </div>
+            
         </div>
     )
 }
@@ -37,7 +39,7 @@ export async function getStaticPaths() {
     const post = await getPost();
 
     return{
-        paths : post.map(({node : {slug}})=>({params : {slug}})),
+        paths : post.map(({node : {slug}})=>({params : { slug }})),
         fallback : false
     }
 }
