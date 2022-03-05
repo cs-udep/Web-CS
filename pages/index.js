@@ -1,9 +1,9 @@
-
 import Head from 'next/head'
 import { PostCard, EventCard } from '../Componentes'
 import { getPost, getEvent } from '../services'
 import Image from 'next/image';
 import UniversidadDePiura from '../Imagenes/UniversidadDePiura.jpg'
+import Link from 'next/link';
 
 export default function Home({ posts, events }) {
   return (
@@ -16,6 +16,7 @@ export default function Home({ posts, events }) {
         <div id='ctn-intro'>
           <div id='ctn-intro-text'>
             <span>Bienvenidos a <br></br> Computer Society <br></br> UDEP - Piura</span>
+            <Link href='/About'><span id='intro-btn-about'>Conócenos</span></Link>
           </div>
           <div id='ctn-intro-img'>
             <Image id='intro-img'  objectFit='cover'  src={UniversidadDePiura} alt='Universidad de Piura' width={1347} height={628}/>
@@ -37,6 +38,9 @@ export default function Home({ posts, events }) {
           <div id='ctn-eventcard'>
             {events.map((item)=><EventCard key={item.node.title} event={item.node}></EventCard>)}
           </div>
+        </div>
+        <div className='ctn-sendmailer'>
+
         </div>
     </div>
   )

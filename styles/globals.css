@@ -36,6 +36,10 @@ nav{
 -webkit-box-shadow: -5px 10px 5px -5px rgba(0,0,0,0.37);
 -moz-box-shadow: -5px 10px 5px -5px rgba(0,0,0,0.37);
 }
+form{
+  display: flex;
+  flex-direction: column;
+}
 /* Footer component */
 
 footer{
@@ -62,6 +66,7 @@ footer{
   height: 100%;
   text-align: center;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: 3.5em;
@@ -78,6 +83,17 @@ footer{
 #ctn-intro-img{
   width: 100%;
   height: 100%;
+}
+#intro-btn-about{
+  margin-top: 1pc;
+  padding: 5px;
+  background-color: #fca311;
+  color: #14213d;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  width: fit-content;
+  height: auto;
+  cursor: pointer;
 }
 /**/
 .ctn-logo-text{
@@ -107,14 +123,17 @@ footer{
   list-style: none;
 }
 .item{
+  width: fit-content;
+  padding: 1pc;
+  margin-left: 5px;
+  color: #ffffff;
   display: inline-block;
   font-size: 1rem ;
-  padding: 1.1pc;
   cursor: pointer;
+  
 }
 .item:hover{
-  background-color: #edf2f4;
-  color: #2b2d42;
+  color: #E5E5E5;
 }
 
 .ctn{
@@ -156,6 +175,7 @@ footer{
   grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
   column-gap: var(--column-gap);
   row-gap: var(--row-gap);
+  justify-content: center;
 }
 /* mix post */
 .postcard, .sponsoredcard, .postwidget-intro{
@@ -471,4 +491,11 @@ time{
   display: flex;
   justify-content: center;
   margin-bottom: 2pc;
+}
+/**/
+#ctn-about{
+  margin-top: var(--nav-h);
+  width: 100%;
+  height: auto;
+
 }

@@ -9,3 +9,4 @@ export {default as Layout }from './Layout';
 export {default as Footer } from './Footer';
 export {default as PostLikes} from "./PostLikes";
 export {default as EventCard} from './EventCard';
+export {default as CommentForm} from './CommentForm';

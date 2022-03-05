@@ -6,7 +6,7 @@ import CSLogo  from '../Imagenes/CSLogo.png'
 const Navbar = () => {
     const routes = [
         {name : 'Blog', slug : 'blog'},
-        {name : 'Acerca de', slug : 'acerca'}
+        {name : 'Conocenos', slug : 'about'}
     ]
     return (
         <nav className='ctn-header'>
@@ -16,15 +16,13 @@ const Navbar = () => {
                 </Link>
             </div>
             <div className='ctn-routes'>
-                
+                <ul className='ctn-items'>
+                    { routes.map((item)=><li key={item.name} className='item'><Link href={`/${item.slug}`}><span>{item.name}</span></Link></li>) }
+                </ul>
             </div>
         </nav>
     )
 }
 /*
-<div className='ctn-routes'>
-                <ul className='ctn-items'>
-                    { routes.map((item)=><li key={item.name} className='item'><Link href={`/Blog/${item.slug}`}><span>{item.name}</span></Link></li>) }
-                </ul>
-            </div>*/ 
+*/ 
 export default Navbar;

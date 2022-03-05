@@ -1,10 +1,9 @@
 import React from 'react';
 import { useRouter } from 'next/router'
-import { PostBanner, SponsoredCard, PostContent, PostLikes, PostWidget } from '../../Componentes';
+import { PostBanner, SponsoredCard, PostContent, PostLikes, PostWidget, CommentForm } from '../../Componentes';
 import { getPost, getPostDetails } from '../../services'
 
 const PostDetails = ({ posts }) => {
-    console.log(posts);
     const router = useRouter();
     if (router.isFallback) {
         return <p>Loading</p>
@@ -18,8 +17,11 @@ const PostDetails = ({ posts }) => {
                 <PostContent content={posts.content} language={posts.languageP}/>
                 <SponsoredCard/>
             </div>
-            <div>
-                <PostLikes post={posts}/>
+            <div className='ctn-comments'>
+                <h2>Deja un comentario</h2>
+                <div id='ctn-commentForm'>
+                    <CommentForm/>
+                </div>
             </div>
             
         </div>
@@ -29,7 +31,7 @@ const PostDetails = ({ posts }) => {
 export default PostDetails;
 
 export async function getStaticProps({params}) {
-    const data = await getPostDetails(params.slug)
+    const data = await getPostDetails(params.slug);
     return{
         props : {posts : data}
     }
@@ -37,7 +39,6 @@ export async function getStaticProps({params}) {
 
 export async function getStaticPaths() {
     const post = await getPost();
-
     return{
         paths : post.map(({node : {slug}})=>({params : { slug }})),
         fallback : false
