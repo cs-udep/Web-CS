@@ -1,13 +1,13 @@
 import Head from 'next/head'
 import { PostCard, EventCard } from '../Componentes'
 import { getPost, getEvent } from '../services'
-import Image from 'next/image';
-import UniversidadDePiura from '../Imagenes/UniversidadDePiura.jpg'
+import UniversidadDePiura from '../Imagenes/UDEP 2.png';
 import Link from 'next/link';
 
 export default function Home({ posts, events }) {
+  const VerMas = 'Ver más >>'
   return (
-    <div className='ctn'>
+    <div id='ctn'>
       <Head>
         <title>Computer Society</title>
         <meta name="Computer Society" content="Blog de computer society Udep Piura" />
@@ -15,11 +15,9 @@ export default function Home({ posts, events }) {
       </Head>
         <div id='ctn-intro'>
           <div id='ctn-intro-text'>
-            <span>Bienvenidos a <br></br> Computer Society <br></br> UDEP - Piura</span>
-            <Link href='/About'><span id='intro-btn-about'>Conócenos</span></Link>
-          </div>
-          <div id='ctn-intro-img'>
-            <Image id='intro-img'  objectFit='cover'  src={UniversidadDePiura} alt='Universidad de Piura' width={1347} height={628}/>
+            <p className='banner-text'><span>Conoce a </span></p>
+            <p className='banner-text'><span>nuestra directiva 2022</span></p>
+            <Link href='/About'><span id='intro-btn-about'>{VerMas}</span></Link>
           </div>
         </div>
         <div id='ctn-articles'>

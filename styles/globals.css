@@ -20,22 +20,34 @@ body{
 /*Nav bar Styles*/
 nav{
   width: 100%;
-  height: var(--nav-h);
-  background-color: #1B2E55;
+  height: auto;
+  background-color: white;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  position: fixed;
   top: 0;
   color: #8d99ae;
   font-weight: 500;
-  justify-content: space-evenly;
   z-index: 20;
 
   box-shadow: -5px 10px 5px -5px rgba(0,0,0,0.37);
--webkit-box-shadow: -5px 10px 5px -5px rgba(0,0,0,0.37);
--moz-box-shadow: -5px 10px 5px -5px rgba(0,0,0,0.37);
+  -webkit-box-shadow: -5px 10px 5px -5px rgba(0,0,0,0.37);
+  -moz-box-shadow: -5px 10px 5px -5px rgba(0,0,0,0.37);
 }
+.ctn-logo{
+  height: var(--nav-h);
+  width: 100%;
+}
+.ctn-routes{
+  width: 100%;
+  height: 4vh;
+  background-color: #00629B;
+  display: flex;
+  justify-content: right;
+}
+
+
+
 form{
   display: flex;
   flex-direction: column;
@@ -51,46 +63,54 @@ footer{
   margin-top: 3rem;
 }
 /* Intro Computer Society*/
-
 #ctn-intro{
-  width: 100%;
-  height: 80vh;
-  background-color: #1B2E55;
+  width: calc(100% - 3pc);
+  margin-top: 1pc;
+  margin-left: 1.5pc;
+  height: auto;
   display: flex;
   justify-content: center;
-  align-items: center;
+  background-repeat: no-repeat;
+  background-image: url('../Imagenes/UDEP 2.png');
 }
 #ctn-intro-text{
   z-index: 2;
-  width: 100%;
-  height: 100%;
-  text-align: center;
+  position: relative;
+  width: auto;
+  height: 710px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: flex-start;
   font-size: 3.5em;
-  color: #E5E5E5;
-  
+  color: #E5E5E5;  
 }
-#ctn-intro-img, #intro-img{
-  mix-blend-mode: multiply;
-  object-fit: contain;
-  position: absolute;
-  z-index: 1;
-  opacity: 0.9;
+.banner-text{
+  margin-top: 0px;
+  padding: 1pc;
+  background-color: white;
+  color: #00629B;
+  font-weight: bold;
 }
 #ctn-intro-img{
   width: 100%;
-  height: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: calc(var(--nav-h) + 4vh + 1pc);
+  margin: auto;
 }
+
 #intro-btn-about{
   margin-top: 1pc;
-  padding: 5px;
-  background-color: #fca311;
-  color: #14213d;
+  padding: 1pc;
+  background-color: #FAA41A;
+  color: white;
   border-radius: 10px;
   font-size: 1.4rem;
+  font-weight: bold;
   width: fit-content;
   height: auto;
   cursor: pointer;
@@ -134,14 +154,6 @@ footer{
 }
 .item:hover{
   color: #E5E5E5;
-}
-
-.ctn{
-  margin-top: 2rem;
-  width: 100%;
-  margin: auto;
-  height: auto;
-  padding-top: 5pc;
 }
 
 /* Post Main Styles*/

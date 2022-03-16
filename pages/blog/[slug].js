@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRouter } from 'next/router'
-import { PostBanner, SponsoredCard, PostContent, PostLikes, PostWidget, CommentForm } from '../../Componentes';
+import { PostBanner, SponsoredCard, PostContent, CommentForm } from '../../Componentes';
 import { getPost, getPostDetails } from '../../services'
 
 const PostDetails = ({ posts }) => {

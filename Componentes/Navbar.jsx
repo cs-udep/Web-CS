@@ -1,7 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import CSLogo  from '../Imagenes/CSLogo.png'
+import UDEPCSLOGO from '../Imagenes/UDEP-CS.png';
+
 
 const Navbar = () => {
     const routes = [
@@ -12,7 +13,7 @@ const Navbar = () => {
         <nav className='ctn-header'>
             <div className='ctn-logo'>
                 <Link href='/' passHref>
-                    <Image src={CSLogo}  alt='Logo de Computer Society' width={110} height={38}/>
+                    <Image src={UDEPCSLOGO}  alt='Logo de Universidad de Piura y Computer Society' width={339} height={89}/>
                 </Link>
             </div>
             <div className='ctn-routes'>
