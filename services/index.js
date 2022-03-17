@@ -5,7 +5,7 @@ const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
 export const getPost = async ()=> {
     const query = gql`
     query MyQuery {
-      postsConnection(orderBy: createdAt_DESC){
+      postsConnection(orderBy: createdAt_DESC, first: 4){
         edges {
           cursor
           node {

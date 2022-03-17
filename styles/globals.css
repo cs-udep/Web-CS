@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 html,
 body{
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family:'Roboto', sans-serif;
   background-color: #f9fafb;
   color: #14213d;
   overflow-x: hidden;
@@ -70,19 +69,18 @@ footer{
   height: auto;
   display: flex;
   justify-content: center;
-  background-repeat: no-repeat;
-  background-image: url('../Imagenes/UDEP 2.png');
 }
 #ctn-intro-text{
   z-index: 2;
-  position: relative;
-  width: auto;
-  height: 710px;
+  position: absolute;
+  padding: 2pc;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  font-size: 3.5em;
+  top: calc(50% - 4pc);
+  left: 2pc;
+  font-size: clamp(1.5rem, 2.5vw, 4rem); ; 
   color: #E5E5E5;  
 }
 .banner-text{
@@ -91,16 +89,6 @@ footer{
   background-color: white;
   color: #00629B;
   font-weight: bold;
-}
-#ctn-intro-img{
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: calc(var(--nav-h) + 4vh + 1pc);
-  margin: auto;
 }
 
 #intro-btn-about{
@@ -286,7 +274,7 @@ footer{
 }
 /*Post Banner*/
 .ctn-post-article{
-  margin-top: calc(var(--nav-h) + 2px);
+  margin-top: 2pc;
 }
 #ctn-articles{
   width: calc(100% - 10%);
@@ -440,12 +428,7 @@ Style Link btn
 .div-code{
   margin-bottom: 2rem;
 }
-.main-blog{
-  margin-top: 2rem;
-  width: 100%;
-  height: 500px;
-  background-color: #234567;
-}
+
 .ctn-form{
   margin: auto;
   margin-top: 2rem;
@@ -456,17 +439,21 @@ Style Link btn
 #ctn-eventcard-all{
   padding-top: 2rem;
   margin-top: 2rem;
-  background-color:#E5E5E5;
+  position: relative;
+  background-color:#024064;
+  height: 90vh;
 }
 #title-eventcard{
   text-align: center;
+  color: white;
 }
 #ctn-eventcard{
+  position: relative;
   width: calc(100% - 2rem);
   height: auto;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  row-gap: var(--row-gap);
+  column-gap: var(--column-gap);
   padding: 1.5rem;
 }
 .eventcard{
@@ -483,7 +470,7 @@ time{
   height: 5pc;
   background-color: #14213d;
   top: -10px;
-  left: 20px;
+  right: 10px;
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -504,6 +491,7 @@ time{
   justify-content: center;
   margin-bottom: 2pc;
 }
+
 /**/
 #ctn-about{
   margin-top: var(--nav-h);
@@ -511,3 +499,21 @@ time{
   height: auto;
 
 }
+/**/
+#ctn-textMap{
+  display: flex;
+  justify-content: flex-start;
+}
+#ctn-mapUdep{
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#map-Udep{
+  width: 80%;
+  height: 40vh;
+}
+/**/

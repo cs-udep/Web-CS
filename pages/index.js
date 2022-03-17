@@ -1,10 +1,13 @@
 import Head from 'next/head'
 import { PostCard, EventCard } from '../Componentes'
 import { getPost, getEvent } from '../services'
+import Image from 'next/image';
+import TextIntro1 from '../Imagenes/TextIntro.png';
 import UniversidadDePiura from '../Imagenes/UDEP 2.png';
 import Link from 'next/link';
 
 export default function Home({ posts, events }) {
+  
   const VerMas = 'Ver más >>'
   return (
     <div id='ctn'>
@@ -15,10 +18,10 @@ export default function Home({ posts, events }) {
       </Head>
         <div id='ctn-intro'>
           <div id='ctn-intro-text'>
-            <p className='banner-text'><span>Conoce a </span></p>
-            <p className='banner-text'><span>nuestra directiva 2022</span></p>
+            <Image src={TextIntro1} alt='Texto de Bienvenida a CS' ></Image>    
             <Link href='/About'><span id='intro-btn-about'>{VerMas}</span></Link>
           </div>
+          <Image id='img-intro' src={UniversidadDePiura} alt='Universidad de Piura' ></Image>
         </div>
         <div id='ctn-articles'>
           <h1>Últimos artículos</h1>
@@ -33,12 +36,15 @@ export default function Home({ posts, events }) {
         </div>
         <div id='ctn-eventcard-all'>
           <h1 id='title-eventcard'>Proximos eventos</h1>
-          <div id='ctn-eventcard'>
+          <div id='ctn-eventcard' >
             {events.map((item)=><EventCard key={item.node.title} event={item.node}></EventCard>)}
           </div>
         </div>
-        <div className='ctn-sendmailer'>
-
+        <div id='ctn-mapUdep'>
+          <div id='ctn-textMap'>
+            <h1>Encuentranos</h1>
+          </div>
+          <iframe id='map-Udep' onScroll='no'  src='https://maps.google.com/maps?q=universidad%20de%20piura%2C%20miraflores&t=m&z=15&output=embed&iwloc=near' ></iframe>
         </div>
     </div>
   )
