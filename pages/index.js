@@ -31,6 +31,7 @@ export default function Home({ posts, events }) {
             </div>
             {/*Aqui van a ir los articulos con mas comentarios o likes */}
             <div className='ctn-sponsoredcard'>
+              <h1>MiniNoticiario CS</h1>
             </div>
           </div>
         </div>
