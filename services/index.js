@@ -2,6 +2,44 @@ import { request, gql } from "graphql-request"
 
 const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
 
+export const getAllPosts = async ()=> {
+  const query = gql`
+  query MyQuery {
+    postsConnection(orderBy: createdAt_DESC){
+      edges {
+        cursor
+        node {
+          author {
+            bio
+            id
+            name
+            profilePhoto {
+              url
+            }
+          }
+          description
+          createdAt
+          like
+          title
+          slug
+          featureImage {
+            url
+          }
+          category {
+            name
+            slug
+          }
+        }
+      }
+    }
+  }    
+`
+const results = await request(graphqlAPI, query)
+
+return results.postsConnection.edges;
+}
+
+
 export const getPost = async ()=> {
     const query = gql`
     query MyQuery {
@@ -179,3 +217,15 @@ export const getSimilarPosts = async () =>{
   return results.posts;
 }
 
+export const getCategories =async()=>{
+  const query = gql`
+    query MyQuery {
+      categories {
+        name
+      }
+    }
+  `
+  const result = await request(graphqlAPI, query);
+
+  return result.categories;
+}

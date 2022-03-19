@@ -191,6 +191,7 @@ footer{
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 300px auto ;
+  row-gap: var(--row-gap);
   height: fit-content;
   border-radius: 0px;
 }
@@ -515,5 +516,19 @@ time{
 #map-Udep{
   width: 80%;
   height: 40vh;
+}
+/**/
+.blog-postcard{
+  width: 1000px;
+  display: grid;
+  grid-template-columns: minmax(200px,500px ) auto;
+  column-gap: var(--column-gap);
+}
+#ctn-blog-postcard{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /**/
