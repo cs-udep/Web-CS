@@ -9,6 +9,6 @@ Y para la gestión de datos utilizo un CMS : ![GraphCMS](https://graphcms.com/?u
 No te olvides de visitarlo y seguir el progreso de esta web ![Web CS](https://blog-woad-beta.vercel.app/)
 
 # Colaborar
-Ey si te gusta el proyecto y el diseño, o si ves algún código espaghetti, puedes ayudarnos 👊, me ayudarías muchísimo 😊. 
+Ey si te gusta el proyecto y el diseño, regalanos una estrella ⭐. Si ves un poco de código spaghetti, puedes apoyarnos 👍
 
 Gracias de todas formas ! ❤
