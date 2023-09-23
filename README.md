@@ -4,9 +4,6 @@ Hola, que tal ? 👋 somos un grupo de alumnos pertenecientes al capítulo IEEE-
 Y para la gestión de datos utilizo un CMS : ![GraphCMS](https://graphcms.com/?utm_medium=collab&utm_source=youtube&utm_campaign=jsmastery&event=video_description&redir_token=QUFFLUhqbmZRYzhBOHl3NlZGTzQ2ajhqT3pkbVl4Z3R2QXxBQ3Jtc0tudE1LODdvMV96Yk5odmhfUktiMVFPVUFYenR6dC1NVEVTU0NTQjJGbmt6MlJZQ2U4SlhVbkdtcGpyNnl0anY2cGw4TlRYWVNwZjlXSE9venNQYnVubnBJUl81WUlxWm10aUlua1lFZTJWeU12M0Vwbw&q=https%3A%2F%2Fgraphcms.com)
 
 
-# Visitalo
-
-No te olvides de visitarlo y seguir el progreso de esta web ![Web CS](https://blog-woad-beta.vercel.app/)
 
 # Colaborar
 Ey si te gusta el proyecto y el diseño, regalanos una estrella ⭐. Si ves un poco de código spaghetti, puedes apoyarnos 👍
